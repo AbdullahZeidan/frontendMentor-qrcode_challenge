@@ -1,0 +1,62 @@
+@use 'globals/reset';
+@use 'globals/colors';
+@use 'globals/typography';
+@use 'globals/utils' as utils;
+
+:root {
+   --white: hsl(0, 0%, 100%);
+   --light-gray: hsl(212, 45%, 89%);
+   --grayish-blue: hsl(220, 15%, 55%);
+   --dark-blue: hsl(218, 44%, 22%);
+
+   --font-size: 15px;
+}
+
+.card-container {
+   @include utils.flex-center();
+}
+
+.card {
+   @include utils.flex-center();
+   flex-direction: column;
+
+   background-color: var(--white);
+
+   border-radius: 1.25rem;
+   width: 22rem;
+   padding: 1rem;
+
+   text-align: center;
+
+   --shdw-x: 0px;
+   --shdw-y: 20px;
+   --shdw-blur: 20px;
+   --shdw-spread: -2px;
+   box-shadow: var(--shdw-x) var(--shdw-y) var(--shdw-blur) var(--shdw-spread)
+      hsla(0, 0%, 0%, 0.1);
+
+   &__image {
+      overflow: hidden;
+      width: 100%;
+      margin-bottom: 1rem;
+
+      border-radius: 0.75rem;
+   }
+
+   &__body {
+      margin-inline: 0.8rem;
+      margin-bottom: 1.6rem;
+   }
+
+   &__heading {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: black;
+
+      margin-bottom: 1rem;
+   }
+   &__text {
+      font-size: 1rem;
+      color: var(--grayish-blue);
+   }
+}

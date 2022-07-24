@@ -1,0 +1,31 @@
+html {
+   box-sizing: border-box;
+   font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   padding-inline: 0.5rem;
+
+   font-family: 'Outfit', sans-serif;
+   background-color: var(--light-gray);
+}
+
+main,
+html,
+body {
+   height: 100%;
+}
+
+:is(h1, h2, h3, h4, h5, h6, p) {
+   font-size: var(--font-size);
+}
